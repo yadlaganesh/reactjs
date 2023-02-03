@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #a7a9ab;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+.main {
+    position: relative;
+    padding-bottom: 70px;
+}
+.logo-img {
+    width: 60px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #f4f5f6; */
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.125);
+    height: 60px;
+    background-color: #fff;
+}
+.search-container {
+    padding: 10px;
+    text-align: center;
+    background: #e3e3e3;
+}
+.search-btn {
+    height: 34px;
+    color: #1e90ff;
+    cursor: pointer;
+    background: #c1c8c7;
+    border: 0px solid #ccc;
+    padding: 9px;
+    font-weight: bold;
+}
+.search-input:focus, .search-input:focus-visible {
+    border: 2px solid transparent !important;
+    border-radius: 0px !important;
+    outline: 0px !important;
+}
+.search-input{
+    height: 30px;
+    width: 800px;
+    padding-left: 5px;
+    border-color: #ccc;
+    border: 1px solid #ccc;
+}
+.nav-items ul{
+    display: flex;
+    list-style-type: none;
+    height: 60px;
+}
+.nav-items ul li{
+   height: 60px;
+   padding: 0px 20px;
+   align-items: center;
+   justify-content: center;
+   vertical-align: middle;
+   display: flex;
+}
+.nav-items ul li a{
+    text-decoration: none;
+}
+.nav-items ul li a:hover{
+    color: cornflowerblue;
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    min-height: 300px;
+    background-color: #fff;
+}
+.card:hover {
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.125);
+}
+.card > img {
+    width: 100%;
+}
+.card h2, .card h3, .card h4 {
+    padding: 10px;
+}
+.cardslist {
+    flex-wrap: wrap;
+    display: flex;
+    place-content: center;
+    vertical-align: middle;
+    /* align-items: center; */
+}
+.footer {
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.125);
+    height: 60px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.footer > p {
+    padding: 10px;
+    text-align: center;
+}
+.card h2, .card h3, .card h4 {
+    word-break: break-word;
+}
+.shimmer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  
+    background: linear-gradient(100deg,
+    rgba(255,255,255,0) 20%,
+    rgba(255,255,255,0.5) 50%,
+    rgba(255,255,255,0) 80%);
+  
+    animation: shimmer 2s infinite linear;
+}
+@keyframes shimmer{
+    from {
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(200%);
+    }
+}
