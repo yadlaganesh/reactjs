@@ -15,6 +15,8 @@ const BodyComponent = () => {
   let searchTxt = "KFC";
   let [searchText, setSearchText] = useState(""); // to create local variable
   // Update state variable using Virtual DOMs diff algoright and Re-consiliation
+  // never create useState inside if condition, or for loop or outside of functional component
+  // never create component inside another component
   const [allrestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
@@ -29,7 +31,7 @@ const BodyComponent = () => {
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
-  if(!allrestaurants) return null;
+  // if(!allrestaurants) return null;
   return (allrestaurants.length == 0) ?  <Shimmer /> : (
     <>
       <div className="search-container">
